@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="logo.png" />
+    <title>Signup Form</title>
+    <style>
+      body,
+      html {
+        margin: 0;
+        padding-left: 250px;
+        font-family: "Arial", sans-serif;
+        background-color: #f0f0f0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        width: 800px;
+      }
+      .container {
+        background: #fff;
+        padding: 40px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
+        width: 100%;
+        animation: fadeIn 1.5s ease-in-out;
+      }
+      h2 {
+        text-align: center;
+        color: #c69d14;
+      }
+      fieldset {
+        border: 1px solid #ccc;
+        padding: 20px;
+        border-radius: 10px;
+      }
+      legend {
+        font-weight: bold;
+        color: #c69d14;
+      }
+      label {
+        display: block;
+        margin-top: 10px;
+        color: #0e0d0d;
+      }
+      input[type="text"],
+      input[type="email"],
+      input[type="password"],
+      input[type="datetime-local"] {
+        width: calc(100% - 16px);
+        padding: 8px;
+        margin-top: 5px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+      }
+      .gender-input {
+        margin-right: 10px;
+      }
+      .submit-btn {
+        margin-top: 20px;
+        padding: 10px 20px;
+        background-color: #c69d14;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        width: 100%;
+        font-size: 1em;
+        transition: background-color 0.3s ease;
+      }
+      .submit-btn:hover {
+        background-color: #deb327;
+      }
+      @keyframes fadeIn {
+        0% {
+          opacity: 0;
+          transform: translateY(30px);
+        }
+        100% {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      a {
+        display: block;
+        margin-top: 20px;
+        text-align: center;
+        color: #4e3d08;
+        text-decoration: none;
+        font-weight: bold;
+        transition: color 0.3s ease;
+      }
+      a:hover {
+        color: #deb327;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h2>Signup Form</h2>
+      <form action="create.php" method="POST">
+        <fieldset>
+          <legend>Personal Information</legend>
+
+          <label for="username">Username:</label>
+          <input type="text" id="username" name="username" required />
+
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required />
+
+          <label for="password">Password:</label>
+          <input type="password" id="password" name="password" required />
+
+          <label for="created_at">Created At:</label>
+          <input type="datetime-local" id="created_at" name="created_at" required />
+
+          <input
+            type="submit"
+            name="submit"
+            value="Signup"
+            class="submit-btn"
+          />
+        </fieldset>
+        <a href="login.html">Have an account? Login</a>
+        <a href="index.html">Back to home</a>
+      </form>
+    </div>
+  </body>
+</html>

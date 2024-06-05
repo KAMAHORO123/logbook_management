@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page</title>
+    <link rel="icon" href="logo.png">
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+            background-color: #f0f0f0;
+        }
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            
+            padding: 10px 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .navbar h1 {
+            color: #c69d14;
+            margin: 0;
+        }
+        .navbar .nav-buttons {
+            display: flex;
+            gap: 10px;
+        }
+        .navbar .nav-buttons a {
+            text-decoration: none;
+            color: #fff;
+            padding: 10px 20px;
+            background-color: #c69d14;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        .navbar .nav-buttons a:hover {
+            background-color: #deb327;
+        }
+        .header {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 80vh;
+            color: #0e0d0d;
+            text-align: center;
+            padding: 20px;
+        }
+        .header-content {
+            max-width: 600px;
+            animation: fadeInUp 2s ease-in-out;
+        }
+        .header-content h2 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+        .header-content p {
+            font-size: 1.2em;
+            margin: 20px 0;
+        }
+        .header-content img {
+            width: 100%;
+            max-width: 400px;
+            animation: float 6s ease-in-out infinite;
+        }
+        @keyframes fadeInUp {
+            0% {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+        .add-logbook-btn {
+            display: block;
+            margin: 20px auto;
+            padding: 10px 20px;
+            background-color: #ac8918; 
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 1em;
+            transition: background-color 0.3s ease;
+        }
+        .add-logbook-btn:hover {
+            background-color: #deb327; 
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <h1>LOGBOOK</h1>
+        <div class="nav-buttons">
+            <a href="login.html">Login</a>
+            <a href="signup.html">Sign Up</a>
+        </div>
+    </nav>
+
+    <header class="header">
+        <div class="header-content">
+            <h2>Welcome to MyWebsite</h2>
+            <p>Your journey to greatness begins here. Login or sign up to get started!</p>
+            <img src="Sign up-rafiki.png" alt="Person logging in">
+            <a href="signup.html" class="add-logbook-btn">ADD LOGBOOK</a>
+        </div>
+    </header>
+</body>
+</html>
